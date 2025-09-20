@@ -206,7 +206,7 @@ fn test_minotaur_move_basic_10() {
     let mut game = theseus::Game::from_board(boards[0])
         .expect(&format!("Failed to create game from board {}", boards[0]));
     check_board_matches_game(&boards[0], &game);
-    for (start_board, finish_board) in boards.iter().zip(boards.iter().skip(1)) {
+    for (_start_board, finish_board) in boards.iter().zip(boards.iter().skip(1)) {
         game.minotaur_move();
         check_board_matches_game(finish_board, &game);
     }
