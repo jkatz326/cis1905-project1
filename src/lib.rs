@@ -172,7 +172,7 @@ impl Game {
             !self.is_goal(self.grid.m_pos.0 - 1, self.grid.m_pos.1) 
         {
             new_pos = (self.grid.m_pos.0 - 1, self.grid.m_pos.1)
-        } else if self.grid.t_pos.0 < self.grid.m_pos.0 && 
+        } else if self.grid.t_pos.0 > self.grid.m_pos.0 && 
             !self.is_wall(self.grid.m_pos.0 + 1, self.grid.m_pos.1) && 
             !self.is_goal(self.grid.m_pos.0 + 1, self.grid.m_pos.1) 
         {
